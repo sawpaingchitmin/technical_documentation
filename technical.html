@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Prgramming</title>
+    <link href="technical.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header class="nav_header">C Prgramming</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Your_First_C_Program">Your First C Program</a></li>
+        <li><a class="nav-link" href="#C_Comments">C Comments</a></li>
+        <li><a class="nav-link" href="#C_Variables_and_Constants">C Variables and Constants</a></li>
+        <li><a class="nav-link" href="#C_Data_Types">C Data Types</a></li>
+        <li><a class="nav-link" href="#C_if...else_Statement">C if...else Statement</a></li>
+        <li><a class="nav-link" href="#C_for_Loop">C for Loop</a></li>
+        <li><a class="nav-link" href="#C_Functions">C Functions</a></li>
+        <li><a class="nav-link" href="#C_Arrays">C Arrays</a></li>
+        <li><a class="nav-link" href="#C_Pointers">C Pointers</a></li>
+        <li><a class="nav-link" href="#C_Strings">C Strings</a></li>
+        <li><a class="nav-link" href="#C_struct">C struct</a></li>
+        <li><a class="nav-link" href="#C_File_Handling">C File Handling</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            C is a powerful general-purpose programming language known for its efficiency and flexibility. It's commonly used in system programming, embedded systems, and creating high-performance applications.
+          </p>
+          <p>
+            Programming languages like C++, Python, and Java are based on C, so it's relatively easier to switch to these languages once you have a good grasp of C.  C is mainly used in high-performance modern applications like:
+          </p>
+         <ul class="use_application">
+           <li>Embedded Systems Design</li>
+           <li>Operating Systems Development</li>
+           <li>Firmware Development</li>
+           <li>Kernel Design</li>
+         </ul>
+         <p>
+          To start coding in C, you need to install a C <a class="page-link" href="https://en.wikipedia.org/wiki/Compiler" target="_blank">compiler</a> on your device. One of the most popular C compilers is GCC (GNU Compiler Collection), which is available for various platforms, including Linux, macOS, and Windows.
+         </p> 
+        </article>
+      </section>
+
+      <section class="main-section" id="Your_First_C_Program">
+        <header>Your First C Program</header>
+        <article>
+          <p>The following program displays "Hello, World!"" on the screen.</p>
+          <div class="code">
+            <code class="code-color">
+            #include "stdio.h" <br>
+            int main() { <br>
+            printf("Hello, World!") <br>
+            return 0; <br>
+            }
+           </code> 
+          </div>
+          <p>
+            A "Hello, World!" program includes the basic syntax of a programming language and helps beginners understand the structure before getting started. That's why it is a common practice to introduce a new language using a "Hello World!" program.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Comments">
+        <header>C Comments</header>
+        <article>
+          <p>Comments are hints that we add to our code, making it easier to understand.</p>
+          <p>Comments are completely ignored by C compilers.</p>
+          <p>For example,</p>
+          <div class="code">
+            <code class="code-color">
+              #include "stdio.h" <br>
+              int main() { <br>
+              <span class="comment-color">// print Hello World to the screen</span> <br>
+              printf("Hello World"); <br>
+              return 0; <br>
+              }
+            </code>
+          </div>
+          <p>Here, "// print Hello World to the screen" is a comment in C programming. The C compiler ignores everything after the "//" symbol.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Variables_and_Constants">
+        <header>C Variables and Constants</header>
+        <article>
+          <h2>Variables</h2>
+          <p>In programming, a variable is a container (storage area) to hold data. <br>To indicate the storage area, each variable should be given a unique name (identifier). Variable names are just the symbolic representation of a memory location. For example:</p>
+          <code class="code code-color">int age = 25;</code>
+          <p>Here, age is a variable of int type and we have assigned an integer value 25 to it.</p>
+
+          <h2>Constants</h2>
+          <p>If you want to define a variable whose value cannot be changed, you can use the const keyword. This will create a constant. For example:</p>
+          <code class="code code-color">const double PI = 3.14;</code>
+          <p>Notice, we have added keyword "const".<br>Here, "PI" is a symbolic constant; its value cannot be changed.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Data_Types">
+        <header>C Data Types</header>
+        <article>
+          <h2>int</h2>
+          <p>Integers are whole numbers that can have both zero, positive and negative values but no decimal values. For example, 0, -5, 10</p>
+          <p>We can use int for declaring an integer variable.</p>
+          <code class="code code-color">int id;</code>
+          <p>Here, id is a variable of type integer.</p>
+
+          <h2>float and double</h2>
+          <p>float and double are used to hold real numbers.</p>
+          <div class="code">
+            <code class="code-color">float salary;<br>
+                double price;</code>
+          </div>
+          <p>What's the difference between "float" and "double"?</p>
+          <p>The size of "float" (single precision float data type) is 4 bytes. And the size of "double" (double precision float data type) is 8 bytes.</p>
+
+          <h2>char</h2>
+          <p>Keyword "char" is used for declaring character type variables. For example,</p>
+          <code class="code code-color">char test = 'h';</code>
+          <p>The size of the character variable is 1 byte.</p>
+
+          <h2>void</h2>
+          <p>"void" is an incomplete type. It means "nothing" or "no type". You can think of void as <strong>absent</strong>.</p>
+          <p>For example, if a function is not returning anything, its return type should be "void".</p>
+          <p>Note that, you cannot create variables of "void" type.</p>
+        </article> 
+      </section>
+
+      <section class="main-section" id="C_if...else_Statement">
+        <header>C if...else Statement</header>
+        <article>      
+          <h2>C if Statement</h2>
+          <p>The syntax of the "if" statement in C programming is:</p>
+          <div class="code">
+            <code class="code-color">
+            if (test expression) <br>
+            { <br>
+              <span class="comment-color">// code</span> <br>
+             }
+            </code>
+          </div>
+
+          <h2>How if statement works?</h2>
+          <p>The "if" statement evaluates the test expression inside the parenthesis ().</p>
+          <ul>
+            <li class="bullet">If the test expression is evaluated to true, statements inside the body of "if" are executed.</li>
+            <li class="bullet">If the test expression is evaluated to false, statements inside the body of "if" are not executed.</li>
+          </ul>
+
+          <h2>C if...else Statement</h2>
+          <p>The "if" statement may have an optional "else" block. The syntax of the if..else statement is:
+          </p>
+          <div class="code">
+            <code class="code-color">
+            if (test expression) { <br>
+            <span class="comment-color">// run code if test expression is true</span> <br>
+            } <br>
+            else { <br>
+            <span class="comment-color">// run code if test expression is false</span> <br>
+            }
+            </code> 
+          </div>
+          <h2>How if...else statement works?</h2>
+          <p>If the test expression is evaluated to true,<p>
+          <ul>
+            <li class="bullet">statements inside the body of "if" are executed.</li>
+            <li class="bullet">statements inside the body of "else" are skipped from execution.</li>
+          </ul>
+
+          <p>If the test expression is evaluated to false,<p>
+          <ul>
+            <li class="bullet">statements inside the body of "else" are executed</li>
+            <li class="bullet">statements inside the body of "if" are skipped from execution.</li>
+          </ul>
+        </article>
+      </section>
+    
+      <section class="main-section" id="C_for_Loop">
+        <header>C for Loop</header>
+        <article>
+          <p>In programming, a loop is used to repeat a block of code until the specified condition is met.</p>
+          <p>C programming has three types of loops:</p>
+          <ol>
+            <li>for loop</li>
+            <li>while loop</li>
+            <li>do...while loop</li>
+          </ol>
+          <p>We will learn about for loop in this tutorial.</p>
+     
+          <h2>for Loop</h2>
+          <p>The syntax of the for loop is:</p>
+          <div class="code">
+            <code class="code-color">
+            for (initializationStatement; testExpression; updateStatement) <br>
+            { <br>
+            <span class="comment-color">// statements inside the body of loop</span> <br>
+            }
+            </code>
+          </div>
+
+          <h2>How for loop works?</h2>
+          <ul>
+            <li class="bullet">The initialization statement is executed only once.</li>
+            <li class="bullet">Then, the test expression is evaluated. If the test expression is evaluated to false, the "for" loop is terminated.</li>
+            <li class="bullet">However, if the test expression is evaluated to true, statements inside the body of the "for" loop are executed, and the update expression is updated.</li>
+            <li class="bullet">Again the test expression is evaluated.</li>
+          </ul>
+          <p>This process goes on until the test expression is false. When the test expression is false, the loop terminates.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Functions">
+        <header>C Functions</header>
+        <article>
+          <p>A function is a block of code that performs a specific task.</p>
+          <p>Suppose, you need to create a program to create a circle and color it. You can create two functions to solve this problem:</p>
+          <ul>
+            <li class="bullet">create a circle function</li>
+            <li class="bullet">create a color function</li>
+          </ul>
+          <p>Dividing a complex problem into smaller chunks makes our program easy to understand and reuse.</p>
+          <h2>Types of function</h2>
+          <p>There are two types of function in C programming:</p>
+          <ul>
+            <li class="bullet">Standard library functions</li>
+            <li class="bullet">User-defined functions</li>
+          </ul>
+
+          <h2>Standard library functions</h2>
+          <p>The standard library functions are built-in functions in C programming.</p>
+          <p>These functions are defined in header files. For example,</p>
+          <ul>
+            <li class="bullet">
+              The "printf()"" is a standard library function to send formatted output to the screen (display output on the screen). This function is defined in the "stdio.h" header file. Hence, to use the "printf()" function, we need to include the "stdio.h" header file using "#include "stdio.h" ".
+            </li>
+            <li class="bullet">
+              The "sqrt()" function calculates the square root of a number. The function is defined in the "math.h" header file.  
+            </li>
+          </ul>
+
+          <h2>User-defined function</h2>
+          <p>You can also create functions as per your need. Such functions created by the user are known as user-defined functions.</p>
+          <h2>How user-defined function works?</h2>
+          <div class="code">
+            <code class="code-color">
+            #include "stdio.h"  <br>
+            void functionName() <br>
+            { <br>
+            ... .. ... <br>
+            ... .. ... <br>
+            } <br>
+
+            int main() <br>
+            { <br>
+            ... .. ... <br>
+            ... .. ... <br>
+
+            functionName(); <br>
+    
+            ... .. ... <br>
+            ... .. ... <br>
+            }
+           </code>
+          </div>
+          <p>The execution of a C program begins from the main() function.</p>
+          <p>When the compiler encounters functionName();, control of the program jumps to</p>  
+          <code class="code code-color">void functionName()</code>
+          <p>And, the compiler starts executing the codes inside "functionName()".</p>
+          <p>The control of the program jumps back to the "main()" function once code inside the function definition is executed.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Arrays">
+        <header>C Arrays</header>
+        <article>
+          <p>An array is a variable that can store multiple values. For example, if you want to store 100 integers, you can create an array for it.</p>
+          <code class="code code-color">int data[100];</code>
+          <h2>How to declare an array?</h2>
+          <code class="code code-color">dataType arrayName[arraySize];</code>
+          <h2>How to initialize an array?</h2>
+          <p>It is possible to initialize an array during declaration. For example,</p>
+          <code class="code code-color">int mark[5] = {19, 10, 8, 17, 9};</code>
+          <p>You can also initialize an array like this.</p>
+          <code class="code code-color">int mark[] = {19, 10, 8, 17, 9};</code>
+          <p>Here, we haven't specified the size. However, the compiler knows its size is 5 as we are initializing it with 5 elements.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Pointers">
+        <header>C Pointers</header>
+        <article>
+          <p>Pointers are powerful features of C and C++ programming. Before we learn pointers, let's learn about addresses in C programming.
+          </p>
+          <h2>Address in C</h2>
+          <p>If you have a variable "var" in your program, "&var" will give you its address in the memory.</p>
+
+          <p>We have used address numerous times while using the "scanf()" function.</p>
+          <code class="code code-color">scanf("%d", &var);</code>
+          <p>Here, the value entered by the user is stored in the address of var variable.</p>
+
+          <h2>C Pointers</h2>
+          <p>Pointers (pointer variables) are special variables that are used to store addresses rather than values.</p>
+          <h2>Pointer Syntax</h2>
+          <p>Here is how we can declare pointers.</p>
+          <code class="code code-color">int* p;</code>
+          <p>Here, we have declared a pointer "p" of "int" type.</p>
+          <p>You can also declare pointers in these ways.</p>
+          <div class="code">
+            <code class="code-color">int *p1; <br>
+                int * p2;
+            </code>
+          </div>
+          <p>Let's take another example of declaring pointers.</p>
+          <code class="code code-color">int* p1, p2;</code>
+          <p>Here, we have declared a pointer "p1" and a normal variable "p2".</p>
+          <h2>Assigning addresses to Pointers</h2>
+          <p>Let's take an example.</p>
+          <div class="code">
+            <code class="code-color">int* pc, c; <br>
+                c = 5; <br>
+                pc = &c;
+            </code>
+          </div>
+          <p>Here, 5 is assigned to the c variable. And, the address of c is assigned to the pc pointer.</p>
+          <h2>Get Value of Thing Pointed by Pointers</h2>
+          <p>To get the value of the thing pointed by the pointers, we use the "*" operator. For example:</p>
+          <div class="code">
+           <code class="code-color">
+            int* pc, c; <br>
+            c = 5; <br>
+            pc = &c; <br>
+            printf("%d", *pc);  <span class="comment-color">// Output: 5</span>
+            </code>
+          </div>
+          <p>Here, the address of c is assigned to the pc pointer. To get the value stored in that address, we used *pc.</p>
+          <h2>Changing Value Pointed by Pointers</h2>
+          <p>Let's take an example.</p>
+          <div class="code">
+            <code class="code-color">
+            int* pc, c; <br>
+            c = 5; <br>
+            pc = &c; <br>
+            c = 1; <br>
+            printf("%d", c);    <span class="comment-color">// Output: 1</span> <br>
+            printf("%d", *pc);  <span class="comment-color">// Ouptut: 1</span>
+            </code>
+          </div>
+          <p>We have assigned the address of "c" to the "pc" pointer.</p>
+          <p>Then, we changed the value of "c" to 1. Since "pc" and the address of "c" is the same, "*pc" gives us 1.</p>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_Strings">
+        <header>C Strings</header>
+        <article>
+          <p>In C programming, a string is a sequence of characters terminated with a null character "\0". For example:</p>
+          <code class="code code-color">char c[] = "c string";</code>
+
+          <p>When the compiler encounters a sequence of characters enclosed in the double quotation marks, it appends a null character "\0" at the end by default.</p>
+          <h2>How to declare a string?</h2>
+          <p>Here's how you can declare strings:</p>
+          <code class="code code-color">char s[5];</code>
+          <p>Here, we have declared a string of 5 characters.</p>
+          <h2>How to initialize strings?</h2>
+          <p>You can initialize strings in a number of ways.</p>
+          <div class="code">
+           <code class="code-color">char c[] = "abcd"; <br>
+                char c[50] = "abcd"; <br>
+                char c[] = {'a', 'b', 'c', 'd', '\0'}; <br>
+                char c[5] = {'a', 'b', 'c', 'd', '\0'};
+            </code>
+          </div>
+          </article>
+      </section>
+
+      <section class="main-section" id="C_struct">
+        <header>C struct</header>
+        <article>
+          <p>In C programming, a struct (or structure) is a collection of variables (can be of different types) under a single name.</p>
+          <h2>Define Structures</h2>
+          <p>Before you can create structure variables, you need to define its data type. To define a struct, the "struct" keyword is used.</p>
+          <h2>Syntax of struct</h2>
+          <div class="code">
+            <code class="code-color">struct structureName { <br>
+                dataType member1; <br>
+                dataType member2; <br>
+                ... <br>
+                };
+            </code>
+          </div>
+          <p>For example,</p>
+          <div class="code">
+            <code class="code-color">struct Person { <br>
+                      char name[50]; <br>
+                      int citNo; <br>
+                      float salary; <br>
+                      };
+            </code>
+          </div>
+
+          <p>Here, a derived type "struct Person" is defined. Now, you can create variables of this type.</p>
+          <h2>Create struct Variables</h2>
+          <p>When a "struct" type is declared, no storage or memory is allocated. To allocate memory of a given structure type and work with it, we need to create variables.</p>
+          <p>Here's how we create structure variables:</p>
+          <div class="code">
+            <code class="code-color">
+                  struct Person { <br>
+                  <span class="comment-color">// code</span> <br>
+                  }; <br>
+
+                  int main() { <br>
+                  struct Person person1, person2, p[20]; <br>
+                  return 0; <br>
+                  }
+            </code>
+          </div>
+          <p>Another way of creating a "struct" variable is:</p>
+          <div class="code">
+            <code class="code-color">struct Person { <br>
+                        <span class="comment-color">// code</span> <br>
+                        } person1, person2, p[20];
+            </code>
+          </div>
+          <p>In both cases,</p>
+            <ul>
+              <li class="bullet">"person1" and "person2" are "struct Person" variables</li>
+              <li class="bullet">"p[ ]" is a "struct Person" array of size 20.</li>
+            </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="C_File_Handling">
+        <header>C File Handling</header>
+        <article>
+          <p>A file is a container in computer storage devices used for storing data.</p>
+          <h2>Why files are needed?</h2>
+          <ul>
+            <li class="bullet">When a program is terminated, the entire data is lost. Storing in a file will preserve your data even if the program terminates.</li>
+            <li class="bullet">If you have to enter a large number of data, it will take a lot of time to enter them all. However, if you have a file containing all the data, you can easily access the contents of the file using a few commands in C.</li>
+            <li class="bullet">You can easily move your data from one computer to another without any changes.
+</li>         
+          </ul>
+          <h2>Types of Files</h2>
+          <p>When dealing with files, there are two types of files you should know about:</p>
+          <ol>
+            <li>Text files</li>
+            <li>Binary files</li>
+          </ol>
+          <h2>1. Text files</h2>
+          <p>Text files are the normal ".txt" files. You can easily create text files using any simple text editors such as Notepad.</p>
+          <p>When you open those files, you'll see all the contents within the file as plain text. You can easily edit or delete the contents.</p>
+          <p>They take minimum effort to maintain, are easily readable, and provide the least security and takes bigger storage space.</p>
+          <h2>2. Binary files</h2>
+          <p>Binary files are mostly the .bin files in your computer.</p>
+          <p>Instead of storing data in plain text, they store it in the binary form (0's and 1's).</p>
+          <p>They can hold a higher amount of data, are not readable easily, and provides better security than text files.</p>
+          <h2>File Operations</h2>
+          <p>In C, you can perform four major operations on files, either text or binary:</p>
+          <ol>
+            <li>Creating a new file</li>
+            <li>Opening an existing file</li>
+            <li>Closing a file</li>
+            <li>Reading from and writing information to a file</li>
+          </ol>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <ul>
+            <li class="bullet">All the documentation in this page is taken from <a class="page-link" href="https://www.programiz.com/c-programming" target="_blank">Programiz</a></li>
+          </ul>
+        <article>
+      </section>
+
+    </main>
+  </body>
+</html>
+
+
