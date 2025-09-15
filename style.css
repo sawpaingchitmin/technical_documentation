@@ -18,7 +18,7 @@ body {
   border-right: 1px solid #E0E0E0;   
   overflow: scroll;
 }
-.nav_header {
+.nav-title {
   text-align: center;
   font-size: 1.9rem;
 }
@@ -89,7 +89,7 @@ code {
     border-right: none;
     border-bottom: 1px solid #E0E0E0;   
   }
-  .nav_header {
+  .nav-title {
     font-size: 1.5rem;
   }
   .nav-link {
