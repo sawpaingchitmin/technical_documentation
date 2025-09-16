@@ -44,7 +44,7 @@ cd technical-documentation
 
 ### 3. Open in browser
 ```bash
-Simply open index.html in your browser to view the landing page.
+Simply open index.html in your browser to view the technical documentation page.
 ```
 
 ## 📂 Project Structure
